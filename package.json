@@ -1,0 +1,24 @@
+{
+  "name": "prova_17_04_2023_danilo",
+  "version": "1.0.0",
+  "description": "Prova Des. WEBII",
+  "main": "manipulation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "nodemon":"nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilosl09/prova_17_04_2023_danilo.git"
+  },
+  "author": "Danilo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danilosl09/prova_17_04_2023_danilo/issues"
+  },
+  "homepage": "https://github.com/danilosl09/prova_17_04_2023_danilo#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
