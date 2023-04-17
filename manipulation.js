@@ -24,7 +24,7 @@ manipulation.getProductById = (req, res) => {
     }
 };
 
-manipulation.createProductById = (req,res)=>{
+manipulation.createProduct = (req,res)=>{
     const newProduct = req.body
     newProduct.id = indice + 1
     listProducts.push(newProduct)
@@ -35,8 +35,8 @@ manipulation.updateProductById = (req,res)=>{
     productIndice = listProducts.findIndex(p => p.id == req.params.id)
     console.log(productIndice)
     if(productIndice >= 0){
-      const pessoaAtualizada = req.body;
-      listProducts[productIndice] = pessoaAtualizada;
+      const productUpdate = req.body;
+      listProducts[productIndice] = productUpdate;
       res.status(200).send("OK")
     }else{
       res.status(404).send('Error 404')
@@ -44,14 +44,14 @@ manipulation.updateProductById = (req,res)=>{
 };
 
 manipulation.deleteProductById = (req,res)=>{
-    const pessoaIndice = listProducts.findIndex(p => p.id == req.params.id);
-    if (pessoaIndice >= 0) {
-        listProducts.splice(pessoaIndice, 1);
+    const productIndice = listProducts.findIndex(p => p.id == req.params.id);
+    if (productIndice >= 0) {
+        listProducts.splice(productIndice, 1);
       res.status(200).send("OK")
     }else{
-      res.status(404).sendFile(path.resolve(__dirname+"/../views/notfound.html"))
+      res.status(404).send('Error 404')
     }
-  }
+  };
 
 
 module.exports = manipulation
